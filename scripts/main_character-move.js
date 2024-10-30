@@ -10,7 +10,7 @@ let isArrowDownPressed = false;
 
 // Устанавливаем начальные позиции, если они не установлены
 if (!main_character.style.left) main_character.style.left = '20px';
-if (!main_character.style.top) main_character.style.top = '20px';
+if (!main_character.style.top) main_character.style.top = '480px';
 
 document.addEventListener('keydown', function(event) {
   const ArrowUp = event.key === 'ArrowUp';
@@ -26,7 +26,7 @@ document.addEventListener('keydown', function(event) {
 
   // Движение персонажа
   moveCharacter();
-  entity_action(shop_entity, showShopHouse);
+  entity_action(shop_entity, () => changePlace('shop_inside'));
   // entity_action(sans_character, () => console.log('this is sans'));
 
 });

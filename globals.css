@@ -7,14 +7,19 @@
 }
 
 body {
+  background: #000;
   font-family: "Pixelify Sans", sans-serif !important;
+}
+.main {
+  min-width: 90vw;
+  min-height: 100vh;
+  background: url(./assets/images/snow_forest.webp);
+  background-size: 70% 100%;
 }
 
 #main_character {
-  width: 50px;
   position: absolute;
-  top: 20px;
-  left: 20px;
+  z-index: 100;
 }
 
 img {
@@ -22,7 +27,7 @@ img {
 }
 
 .character {
-  width: 50px;
+  width: 70px;
 }
 
 .house {

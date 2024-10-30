@@ -7,16 +7,16 @@
   <link rel="stylesheet" href="./globals.css">
 </head>
 <body>
-  <main>
+  <main class="main" data-id="snow_forest">
     <div id="main_character" class="character">
       <img src="./assets/characters/Frisk_the_Human.webp" alt="">
     </div>
-
-    <div id="shop_entity" class="house">
+    <button id="btn">looooooooooool</button>
+    <div id="shop_entity" class="house" style="position: absolute; top: -20px; left: 600px;">
       <img src="./assets/houses/house.png" alt="">
     </div>
 
-    <div id="sans_character" class="character" style="margin-top: 30vh;">
+    <div id="sans_character" class="character" style="position: absolute; top: 470px; left: 0px;">
       <img src="./assets/characters/sans_character.webp" alt="">
     </div>
 
@@ -28,5 +28,6 @@
   <script src="./scripts/main_character-move.js"></script>
   <script src="./scripts/shop_house.js"></script>
   <script src="./scripts/entity_action.js"></script>
+  <script src="./utils/game-state.js"></script>
 </body>
 </html>
