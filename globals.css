@@ -13,7 +13,7 @@ body {
 .main {
   min-width: 90vw;
   min-height: 100vh;
-  background: url(./assets/images/snow_forest.webp);
+  background: url(./assets/locations/snow_forest-location.webp);
   background-size: 70% 100%;
 }
 

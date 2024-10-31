@@ -9,19 +9,24 @@ const gameState = {
 const places = [
   {
     name: 'snow_forest',
-    bg: 'snow_forest.webp',
+    bg: 'snow_forest-location.webp',
   },
   {
     name: 'shop_inside',
-    bg: 'shop_inside.jpg',
+    bg: 'shop_inside-location.jpg',
   }
 ]
 const main = document.querySelector('main');
-console.dir(main.dataset.id)
 
+const shopHtml = `
+  <button>Buy</button>
+  <button>Sell</button>
+`
 const changePlace = (place) => {
   const currentPlace = places.find(p => p.name === place);
-  main.style.backgroundImage = `url(./assets/images/${currentPlace.bg})`;
+  main.style.backgroundImage = `url(./assets/locations/${currentPlace.bg})`;
+  console.log('place changed', place);
+  main.innerHTML = shopHtml;
 }
 
 const observer = new MutationObserver(changePlace);
@@ -30,12 +35,3 @@ observer.observe(main,  {
   childList: false,
   subtree: false,
 });
-
-const btn = document.querySelector('#btn');
-btn.addEventListener('click', () => {
-  if (main.dataset.id === 'shop_inside') {
-    main.dataset.id = 'snow_forest';
-  } else {
-    main.dataset.id = 'shop_inside'
-  }
-})

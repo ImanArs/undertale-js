@@ -8,8 +8,6 @@ const entity_action = (entity, action) => {
     main_character_rect.left < entity_rect.right + distance &&
     main_character_rect.bottom > entity_rect.top - distance &&
     main_character_rect.top < entity_rect.bottom + distance) {
-      console.log(user_actions.firstChild);
-      
     if (user_actions.children.length === 0) {
       const created_btn = document.createElement('button');
       created_btn.innerText = 'Press E to interact';
